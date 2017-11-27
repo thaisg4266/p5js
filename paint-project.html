@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+    var r,g,b
+    var s
+        function setup() {
+            createCanvas(800,600);
+                    background(200)
+                    r = 255
+                    g = 255
+                    b = 255
+                    s = 70
+        }
+
+        function draw() {
+    
+            //red
+            fill(255,0,0)
+            rect(50,500,50,50)
+            //green
+            fill(0,255,0)
+            rect(150,500,50,50)
+            //blue
+            fill(0,0,255)
+            rect(250,500,50,50)
+            //black
+            fill(0)
+            rect(350,500,50,50)
+            //purple
+            fill(161,30,255)
+            rect(450,500,50,50)
+            //pink
+            fill(252,30,152)
+            rect(550,500,50,50)
+            //clear
+            fill(0,0)
+            rect(700,500,50,50)
+            
+            
+        }
+        
+        function mousePressed(){
+            //red
+            if(mouseX>50 && mouseX<100 && mouseY>500 && mouseY<550){
+                r=255
+                g=0
+                b=0
+                
+                //green
+            }else if(mouseX>150 && mouseX<200 && mouseY>500 && mouseY<550){
+            r=0
+            g=255
+            b=0
+             
+             //blue
+            }else if(mouseX>150 && mouseX<300 && mouseY>500 && mouseY<550){
+                r=0
+                g=0
+                b=255
+            
+            //black
+            }else if(mouseX>150 && mouseX<400 && mouseY>500 && mouseY<550){
+                r=0
+                g=0
+                b=0
+                
+                //purple
+            }else if(mouseX>150 && mouseX<500 && mouseY>500 && mouseY<550){
+                r=161
+                g=30
+                b=255
+            
+            //pink
+            }else if(mouseX>150 && mouseX<600 && mouseY>500 && mouseY<550){
+                r=252
+                g=30
+                b=152
+                
+                //clear
+            }else if(mouseX>700 && mouseX<750 && mouseY>500 && mouseY<550){
+                background(200)  
+            } 
+        
+         
+           fill(r,g,b)
+            ellipse(mouseX, mouseY, s, s)
+            
+        }
+        
+        function mouseDragged(){
+            stroke(r,g,b)
+            fill(r,g,b)
+            ellipse(mouseX, mouseY, s, s)
+            
+        }
+        
+              function keyPressed(){
+                  if(keyCode == 66){
+                      s++
+                  }else if(keyCode == 83){
+                      s--
+                  }else{
+                      s=70
+                  }
+              }
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/thaisg4266/p5js/blob/master/paint-project.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+</html>
